@@ -16,9 +16,15 @@ public class UniData {
     }
 
     public void setScore(String score) {
-        
         this.score = score;
-        if(score == null) score = "0";
+        if(!score.isEmpty()){
+            Double temp = Double.parseDouble(score);
+            temp = Math.ceil(temp);
+            Integer temp2 = temp.intValue();
+            this.score = temp2.toString();
+        }else{
+            this.score = "0";
+        }
     }
 
     public String getUniName() {
@@ -88,13 +94,21 @@ public class UniData {
         this.year = year;
         this.rank = rank;
         this.uniName = uniName;
-        this.score = score;
         this.link = link;
         this.country = country;
         this.city = city;
         this.region = region;
         this.logo = logo;
-        if(score == null) score = "0";
+        this.score = score;
+        if(!score.isEmpty()){
+            Double temp = Double.parseDouble(score);
+            temp = Math.ceil(temp);
+            Integer temp2 = temp.intValue();
+            this.score = temp2.toString();
+        }else{
+            this.score = "0";
+        }
+        
     }// end overload constructor
 
     

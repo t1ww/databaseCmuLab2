@@ -13,10 +13,9 @@ public class lab2main {
     // We need to replace comma "," in the csv with "||" 
 
     public static void main(String args[]) throws IOException {
-        Vector<UniData> myUni = new Vector<UniData>();
         System.out.println("Program start!");
-       
-        
+        //create ds vector
+        Vector<UniData> myUni = new Vector<UniData>();
         // Parsing a CSV file into Scanner class constructor  
         String bigFile = "lab2/QS-World-University-Rankings-2017_full.csv";
         String smallFile = "lab2/QS-World-University-Rankings-2017_small.csv";
@@ -73,7 +72,6 @@ public class lab2main {
         }
     }
     public static void setUniNameToLowercase(Vector<UniData> ds_uni){
-        
         for (int i = 0; i < ds_uni.size(); i++) {
             if(ds_uni.get(i).getUniName() != null)
                 ds_uni.get(i).setUniName((ds_uni.get(i).getUniName().toLowerCase()));
