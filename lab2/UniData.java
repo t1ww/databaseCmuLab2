@@ -7,6 +7,79 @@ public class UniData {
     
     String year, score, uniName, link, city, country, region, logo, rank;
 
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public String getScore() {
+        return score;
+    }
+
+    public void setScore(String score) {
+        
+        this.score = score;
+        if(score == null) score = "0";
+    }
+
+    public String getUniName() {
+        return uniName;
+    }
+
+    public void setUniName(String uniName) {
+        this.uniName = uniName;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
+    }
+
+    public String getRank() {
+        return rank;
+    }
+
+    public void setRank(String rank) {
+        this.rank = rank;
+    }
+    
+    public String getRegion() {
+        return region;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
+    public String  getYear() {
+        return this.year;
+    }
+
     public UniData() {
 
     }// default constructor
@@ -21,77 +94,10 @@ public class UniData {
         this.city = city;
         this.region = region;
         this.logo = logo;
-
+        if(score == null) score = "0";
     }// end overload constructor
-    public String getRegion() {
-        return region;
-    }
 
-    public void setRegion(String region) {
-        this.region = region;
-    }
-    public String  getYear() {
-        return this.year;
-    }
-    public void setYear(String x) {
-        this.year = x;
-    }
-
-    public String getUniName() {
-        return this.uniName;
-    }
-
-    public void setUniName(String x) {
-        this.uniName = x;
-    }
-
-    public String getRank() {
-        return this.rank;
-    }
-
-    public String  getScore() {
-        return this.score;
-    }
-
-    public void setScore(String  x) {
-        this.score = x;
-    }
-
-    public void setRank(String x) {
-        this.rank = x;
-    }
-
-    public String getLink() {
-        return this.link;
-    }
-
-    public void setLink(String x) {
-        this.link = x;
-    }
-
-    public String getLogo() {
-        return this.logo;
-    }
-
-    public void setLogo(String x) {
-        this.logo = x;
-    }
-
-    public String getCountry() {
-        return this.country;
-    }
-
-    public void setCountry(String x) {
-        this.country = x;
-    }
-
-    public String getCity() {
-        return this.country;
-    }
-
-    public void setCity(String x) {
-        this.city = x;
-    }
+    
 
     public String toString() {
         return "[" + this.year + ", " + this.rank + ", " + this.uniName + ", " + this.score + ", " 
