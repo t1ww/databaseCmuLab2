@@ -6,10 +6,7 @@ package lab2;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -31,9 +28,15 @@ public class lab2main {
         // Skip the header 
         sc.nextLine();
         while (sc.hasNextLine()) {  
-            UniData u = new UniData(sc.next(), sc.next(), sc.next(), sc.next(), sc.next(), sc.next(), sc.next(), sc.next(), sc.next());
-            myUni.add(u);
-            sc.nextLine();
+            String line = sc.nextLine();
+            String[] data = line.split(",");
+            if (data.length >= 9) {
+                UniData u = new UniData(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8]);
+
+                if (u.getRank().matches("\\d+")) {
+                    myUni.add(u);
+                }
+            }
         }  // end while loop
         
         // Line 14"Nanyang Technological University, Singapore (NTU) Exception in thread "main" java.util.InputMismatchException
@@ -65,8 +68,12 @@ public class lab2main {
                 myUni.get(index).getCity() + "," + myUni.get(index).getRegion() + "," + myUni.get(index).getLogo());
             }
             writer.close();
-
+        
+/// code ends
         System.out.println("Program terminate properly!");
+        System.out.println("Please check the output files :");
+        System.out.println("> QS World University Rankings 2017_out.csv");
+        System.out.println("> QS World University Rankings 2017_Updated");
 
     } // end main
     public static void printAll(Vector<UniData> ds_uni){   
@@ -101,5 +108,5 @@ public class lab2main {
         }
         return true;
     }
-}// end class Main
+}// end class
 
